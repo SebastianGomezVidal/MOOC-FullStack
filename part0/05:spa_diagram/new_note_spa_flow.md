@@ -10,12 +10,7 @@ participant server
 
     server-->>server: Update note's data-structure by adding the information of the new note ( Content and Date)
 
-    server->>browser: 302 Response - Redirect
-    deactivate server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp
-    activate server
-    server-->>browser: the html file is returned
+    server->>browser: Sends html back to the browser
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
